@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Meetup::VERSION
   spec.authors       = ["Isaac Rosenberg"]
   spec.email         = ["irosenb7@gmail.com"]
-  spec.description   = %q{A better gem for the Meetup API}
+  spec.description   = %q{A gem for the Meetup API}
   spec.summary       = spec.description
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/irosenb/meetup"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

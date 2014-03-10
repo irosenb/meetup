@@ -1,6 +1,6 @@
 # Meetup
 
-TODO: Write a gem description
+This is a gem for the Meetup API. It has no OAuth, that can be done with [omniauth-meetup]() 
 
 ## Installation
 
