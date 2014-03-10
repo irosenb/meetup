@@ -1,6 +1,6 @@
 # Meetup
 
-This is a gem for the Meetup API. It has no OAuth, that can be done with [omniauth-meetup]() 
+This is a gem for the Meetup API. It has no OAuth, that can be done with [omniauth-meetup](https://github.com/tapster/omniauth-meetup/) 
 
 ## Installation
 
