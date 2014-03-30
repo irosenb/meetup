@@ -1,4 +1,5 @@
 require "meetup/version"
+# require "meetup/config"
 
 module Meetup
   class Client
