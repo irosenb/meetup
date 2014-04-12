@@ -1,4 +1,5 @@
 require "meetup/version"
+require "httparty"
 
 module Meetup
   class Client
@@ -10,9 +11,12 @@ module Meetup
     def initialize(access_token="", key)
       @access_token = access_token
       @key = key
-      @options = {:key => @key, :access_token => @access_token}
+      @options = {:key => @key, 
+        :access_token => @access_token}
+    end
 
-      self.class.get('/2/self', @options)
+    def self
+      self.class.get('/2/member/self', @options)
     end
 
   end

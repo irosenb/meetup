@@ -2,25 +2,20 @@ require "spec_helper.rb"
 
 describe Meetup::Client do
   before do
-    Meetup::Client.new
+    @user = Meetup::Client.new("83e5a28ba8899295eebfe5f8748396b3", "3a1b322e113b3130592c2f32193776a") 
   end 
   
-  describe "basics" do
-    it "should take an access token" do
-      subject.access_token = "hi"
-      expect(subject.access_token).to eq("hi") 
-    end
-
-    it "should have a version" do
-      expect(Meetup::VERSION).not_to be_empty 
+  describe "#new" do
+    it "should take an access token" do 
+      expect(@user.access_token).to eq("83e5a28ba8899295eebfe5f8748396b3")
     end
   end
 
-  describe "configuration" do
-    describe "#api_key" do
-      it "should return default key" do
-        expect(subject.api_key).to eq(Meetup::Configuration::DEFAULT_API_KEY) 
-      end
+  describe "#self" do
+    it "should return user's info" do
+      test = @user.self
+      puts test['details']
+      expect(test.city).to eq("New York") 
     end
   end
 end
