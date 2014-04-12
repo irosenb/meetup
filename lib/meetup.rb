@@ -10,7 +10,7 @@ module Meetup
 
     def initialize(key)
       @key = key
-      @options = {:key => @key, :sign => 'true'}  
+      @options = {:api_key => @key, :sign => 'true'}  
     end
     
     def self
