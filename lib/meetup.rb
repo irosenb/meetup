@@ -5,12 +5,13 @@ module Meetup
   class Client
     include HTTParty
     attr_accessor :key
+    # default_params :key => @key
 
     base_uri 'api.meetup.com'
 
     def initialize(key)
       @key = key
-      @options = {:api_key => @key, :sign => 'true'}  
+      @options = {:query => {:key => @key, :sign => 'true'}}  
     end
     
     def self
