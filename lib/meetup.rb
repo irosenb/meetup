@@ -4,19 +4,17 @@ require "httparty"
 module Meetup
   class Client
     include HTTParty
-    attr_accessor :access_token, :key
+    attr_accessor :key
 
     base_uri 'api.meetup.com'
 
-    def initialize(access_token="", key)
-      @access_token = access_token
+    def initialize(key)
       @key = key
-      @options = {:key => @key, 
-        :access_token => @access_token}
+      @options = {:key => @key, :sign => 'true'}  
     end
-
+    
     def self
-      self.class.get('/2/member/self', @options)
+      self.class.get('/2/member/self', @options)  
     end
 
   end
