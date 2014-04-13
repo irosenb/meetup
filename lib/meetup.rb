@@ -16,7 +16,6 @@ module Meetup
     
     def self
       self.class.get('/2/member/self', @options)  
-    end
-
+    end 
   end
 end
