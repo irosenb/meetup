@@ -2,7 +2,7 @@ require "spec_helper.rb"
 
 describe "#self" do
   before do
-    @user = Meetup::Client.new("3a1b322e113b3130592c2f32193776a")
+    @user = Meetup::Member.new
   end
 
   it "should return user's info" do
