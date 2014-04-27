@@ -2,7 +2,9 @@ require "meetup/version"
 require "httparty"
 
 module Meetup
-  attr_accessor :key, :access_token
+  class << self
+    attr_accessor :key, :access_token
+  end
   
   
 end
