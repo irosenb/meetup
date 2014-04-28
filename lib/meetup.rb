@@ -1,14 +1,12 @@
-require "meetup/version"
-# require "meetup/config"
+require "httparty"
+require "require_all"
+
+require_rel 'meetup'
 
 module Meetup
-  class Client
-    attr_accessor :access_token, :key
-    def intialize(options={})
-      options.each do |key, value|
-        send(:"#{key}=", value)
-      end
-        yield(self) if block_given?
-    end
+  class << self
+    attr_accessor :key, :access_token
   end
+  
+  
 end
