@@ -1,5 +1,5 @@
 module Meetup
-  class Member < Meetup::Client
+  class Member
     def self
       "hi"
     end
