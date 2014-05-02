@@ -1,22 +1,12 @@
 describe "configuration" do
-  describe ".api_key" do
-    it "should return default key" do
-      expect(subject.api_key).to eq(Meetup::Configuration::DEFAULT_API_KEY) 
+  describe ".configure" do
+    %w{access_token key}.each do |key|
+      it "should set the #{key}" do
+        Meetup.configure do |config|
+          config.send("#{key}=", key)
+          expect(Meetup.send(key)).to eq(key)
+        end
+      end      
     end
   end
-
-  describe ".format" do
-    it "should return default format" do
-      expect(subject.format).to eq(Meetup::Configuration::DEFAULT_FORMAT)
-    end
-  end
-
-  it "should return default user agent" do
-    expect(subject.user_agent).to eq(Meetup::Configuration::DEFAULT_USER_AGENT)
-  end
-
-  it "should return default http method" do
-    expect(subject.method).to eq(Meetup::Configuration::DEFAULT_METHOD)
-  end
-
 end
