@@ -1,7 +1,7 @@
-describe Meetup::Request do
+describe Meetup do
   describe ".get" do
     it "should make a request" do
-      Meetup::Request.get
+      Meetup.get("/hi")
       assert_requested :get
     end
   end
