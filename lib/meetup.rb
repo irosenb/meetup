@@ -6,7 +6,5 @@ require_rel 'meetup'
 module Meetup
   class << self
     attr_accessor :key, :access_token
-  end
-  
-  
+  end 
 end

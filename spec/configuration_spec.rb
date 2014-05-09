@@ -1,3 +1,5 @@
+require "spec_helper.rb"
+
 describe "configuration" do
   describe ".configure" do
     %w{access_token key}.each do |key|

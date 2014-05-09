@@ -1,7 +1,8 @@
 describe Meetup::Request do
   describe ".get" do
     it "should make a request" do
-      expect(Meetup::Request.get).to eq("hi") 
+      Meetup::Request.get
+      assert_requested :get
     end
   end
 end
