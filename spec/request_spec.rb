@@ -1,8 +1,11 @@
+require "pry"
+
 describe Meetup do
   describe ".get" do
     it "should make a request" do
-      Meetup.get("/hi")
-      assert_requested :get
+      request = Meetup.get("/hi")
+      binding.pry
+      expect(request).to be_true 
     end
   end
 end
